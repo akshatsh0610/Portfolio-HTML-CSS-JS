@@ -1,0 +1,66 @@
+themeButton=document.querySelector('.dark-mode');
+mode=document.querySelector('.fa-sun');
+body=document.querySelector('body');
+menu=document.querySelector('.menu');
+logo=document.querySelector('.logo');
+mobileMenu=document.querySelector('.hamburger');
+section_1=document.querySelector('.section-1');
+section_2=document.querySelector('.section-2');
+section_3=document.querySelector('.section-3');
+section_5=document.querySelector('.section-5');
+section_6=document.querySelector('.section-6');
+section_7=document.querySelector('.section-7');
+footer=document.querySelector('.footer');
+let theme="dark";
+let active=false;
+themeButton.addEventListener('click',()=>{
+    if(theme==="dark")
+    {
+        //light
+        theme="light;"
+        mode.classList.remove("fa-sun");
+        mode.classList.add("fa-moon");
+        body.classList.remove("dark-theme");
+        body.classList.add("light-theme");
+        logo.classList.add("light");
+        menu.classList.add("light");
+        mobileMenu.classList.add("light");
+        section_1.classList.add("light");
+        section_2.classList.add("light");
+        section_3.classList.add("light");
+        section_5.classList.add("light");
+        section_6.classList.add("light");
+        section_7.classList.add("light");
+        footer.classList.add("light");
+    }
+    else{
+        //dark
+        theme="dark";
+        mode.classList.remove("fa-moon");
+        mode.classList.add("fa-sun");
+        body.classList.remove("light-theme");
+        body.classList.add("dark-theme");
+        logo.classList.remove("light");
+        menu.classList.remove("light");
+        mobileMenu.classList.remove("light");
+        section_1.classList.remove("light");
+        section_2.classList.remove("light");
+        section_3.classList.remove("light");
+        section_5.classList.remove("light");
+        section_6.classList.remove("light");
+        section_7.classList.remove("light");
+        footer.classList.remove("light");
+    }
+})
+mobileMenu.addEventListener('click',()=>{
+    if(!active)
+    {
+        active=true;
+        menu.classList.add('active');
+    }
+    else
+    {
+        active=false;
+        menu.classList.remove('active');
+    }
+})
